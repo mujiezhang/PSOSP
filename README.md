@@ -1,1 +1,1 @@
-# Prophage-SOS-dependency-Predictor-PSP-
+# Prophage-SOS-dependency-Predictor(PSP)
