@@ -28,7 +28,7 @@ usage: ```psp -h```
 
 ## Input files
 PSP needs four files as inputs,i.e.,
-* ```-hf```: host genome in fasta format
+* ```-hf```: a host genome in fasta format
 * ```-vf```: a single viral genome in fasta format
 * ```-motif```: a motif file provided by psp as ```19-motifs-meme.txt``` 
 * ```-lexa```: lexa database for diamond blastp provided by psp as ```uniprot_swiss_prot_LexA.dmnd``` 
