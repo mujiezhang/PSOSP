@@ -1,7 +1,9 @@
 # Prophage-SOS-dependency-Predictor(PSP) 
 PSP is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
 
-Citation
+## Citation
+Please cite as follows if you find PSP is helpful for your analyses.'''SOS-independent prophages prevail in the bacterial genomes'''
+
 ## Dependencies
 * PSP is a Python script that relies on:
 ```Biopython
@@ -10,6 +12,25 @@ MEME
 Python3
 scikit-learn
 ```
+
+## Installation
+*(1) git
+'''
+git clone https://github.com/mujiezhang/Prophage-SOS-dependency-Predictor.git
+cd Prophage-SOS-dependency-Predictor
+python psp.py -h
+'''
+
+*(2) pip
+'''pip install PSP '''
+
+*(3) conda
+'''
+conda create -n PSP python=3.8
+conda activate PSP
+conda install PSP
+'''
+usage: '''psp -h'''
 
 ## Input files
 PSP needs four files as inputs,i.e.,
@@ -36,4 +57,4 @@ Running this example with one core takes approximately two minutes. And you will
 
 ## Attention
 1. PSP is designed for complete host and corresponding complete virus for that host. Using incomplete genome as input may influence the prediction accuracy.
-2.  
+2. PSP 
