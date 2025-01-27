@@ -28,7 +28,7 @@ pip install PSP
 
 (3) conda
 ```
-conda create -n PSP python=3.8
+conda create -n PSP python=3.12
 conda activate PSP
 conda install PSP
 ```
