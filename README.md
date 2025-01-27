@@ -6,9 +6,15 @@ PSP is a novel bioinformatics tool to predict prophage induction modes by analyz
 DIAMOND
 MEME
 Python3
-sklearn
+scikit-learn
 ```
-## How to run
+## Input files
+PSP needs four files as inputs,i.e.,
+* -hf: host genome in fasta format
+* -vf: a single viral genome in fasta format
+* -motif: a motif file provided by psp as ```COBRA_joining_status.txt``` 
 
+
+#
 ## Attention
 
