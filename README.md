@@ -15,22 +15,22 @@ scikit-learn
 
 ## Installation
 *(1) git
-'''
-git clone https://github.com/mujiezhang/Prophage-SOS-dependency-Predictor.git
-cd Prophage-SOS-dependency-Predictor
+```
+git clone https://github.com/mujiezhang/PSP.git
+cd PSP
 python psp.py -h
-'''
+```
 
 *(2) pip
-'''pip install PSP '''
+```pip install PSP```
 
 *(3) conda
-'''
+```
 conda create -n PSP python=3.8
 conda activate PSP
 conda install PSP
-'''
-usage: '''psp -h'''
+```
+usage: ```psp -h```
 
 ## Input files
 PSP needs four files as inputs,i.e.,
