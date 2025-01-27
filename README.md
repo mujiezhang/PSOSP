@@ -21,12 +21,7 @@ cd PSP
 python psp.py -h
 ```
 
-(2) pip
-```
-pip install PSP
-```
-
-(3) conda
+(2) conda
 ```
 conda create -n PSP python=3.12
 conda activate PSP
