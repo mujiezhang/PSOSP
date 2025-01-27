@@ -1,5 +1,7 @@
 # Prophage-SOS-dependency-Predictor(PSP) 
 PSP is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
+
+Citation
 ## Dependencies
 * PSP is a Python script that relies on:
 ```Biopython
@@ -8,6 +10,7 @@ MEME
 Python3
 scikit-learn
 ```
+
 ## Input files
 PSP needs four files as inputs,i.e.,
 * ```-hf```: host genome in fasta format
@@ -15,6 +18,22 @@ PSP needs four files as inputs,i.e.,
 * ```-motif```: a motif file provided by psp as ```19-motifs-meme.txt``` 
 * ```-lexa```: lexa database for diamond blastp provided by psp as ```uniprot_swiss_prot_LexA.dmnd``` 
 
-#
-## Attention
+other parameters
+*```-wd```: woking path to save result files
 
+## How to run
+The users can only specify the required parameters:
+```
+python psp.py -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd output_dir
+```
+
+for example:
+```
+python psp.py -hf E.coli-HS.fasta -vf phiECO1.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd .
+```
+
+Running this example with one core takes approximately two minutes. And you will get two files: ```host_whole_genome_HI.tsv``` and ```prediction.tsv```
+
+## Attention
+1. PSP is designed for complete host and corresponding complete virus for that host. Using incomplete genome as input may influence the prediction accuracy.
+2.  
