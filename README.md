@@ -22,7 +22,9 @@ python psp.py -h
 ```
 
 (2) pip
-```pip install PSP```
+```
+pip install PSP
+```
 
 (3) conda
 ```
