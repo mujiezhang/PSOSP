@@ -2,7 +2,7 @@
 PSP is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
 
 ## Citation
-Please cite as follows if you find PSP is helpful for your analyses.```SOS-independent prophages prevail in the bacterial genomes```
+Please cite as follows if you find PSP is helpful for your analyses.```SOS-independent prophages prevail in the bacterial genomes.```
 
 ## Dependencies
 * PSP is a Python script that relies on:
@@ -56,5 +56,5 @@ python psp.py -hf E.coli-HS.fasta -vf phiECO1.fasta -motif 19-motifs-meme.txt -l
 Running this example with one core takes approximately two minutes. And you will get two files: ```host_whole_genome_HI.tsv``` and ```prediction.tsv```
 
 ## Attention
-1. PSP is designed for complete host and corresponding complete virus for that host. Using incomplete genome as input may influence the prediction accuracy.
-2. PSP 
+* PSP is designed for complete host and corresponding complete virus for that host. Using incomplete genome as input may influence the prediction accuracy.
+
