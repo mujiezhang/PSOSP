@@ -12,7 +12,7 @@ Prodigal
 ```
 
 ## Installation
-(1) git
+(1) git (install dependencies mentioned above first)
 ```
 git clone https://github.com/mujiezhang/PSP.git
 cd PSP
