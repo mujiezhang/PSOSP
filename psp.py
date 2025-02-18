@@ -275,7 +275,7 @@ with open(host_hi,'w') as ff:
         else:
             hi_dic[ms_label3[i]].append(float('%.4f'% a3[i]))
 a4={}
-virus_hi=output_dir+'/'+fna2.split('/')[-1]+'_result.tsv'
+virus_hi=output_dir+'/'+fna2.split('/')[-1]+'_prediction.tsv'
 hi_final=100
 box_final=''
 with open(virus_intergenic_region,'r') as fii:
