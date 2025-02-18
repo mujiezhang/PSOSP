@@ -41,7 +41,7 @@ def run_prodigal(input_fna: str, output_faa: str, mode: str = "meta"):
 os.makedirs(output_dir, exist_ok=True)
 host_faa = os.path.join(output_dir, fna1.split('/')[-1]+".faa")
 print("Running Prodigal for host...")
-#run_prodigal(fna1, host_faa)
+run_prodigal(fna1, host_faa)
 # DIAMOND analysis
 blast_out = os.path.join(output_dir, fna1.split('/')[-1]+".faa_lexa_blast.tsv")
 print("Running DIAMOND for LexA...")
