@@ -50,7 +50,7 @@ psp -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa
 
 for example(install through git):
 ```
-python psp.py -hf E.coli-HS.fasta -vf phiECO1.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd .
+python psp.py -hf test/E.coli-HS.fasta -vf test/phiECO1.fasta -motif files/19-motifs-meme.txt -lexa files/uniprot_swiss_prot_LexA.dmnd -wd .
 ```
 
 Running this example with one core takes approximately two minutes. And result file is stored in file ```*_prediction.tsv```
