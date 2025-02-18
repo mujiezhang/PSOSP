@@ -8,6 +8,7 @@ DIAMOND
 MEME
 Python3
 scikit-learn
+Prodigal
 ```
 
 ## Installation
