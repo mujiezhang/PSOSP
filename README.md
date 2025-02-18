@@ -34,7 +34,7 @@ PSP needs four files as inputs,i.e.,
 * ```-lexa```: lexa database for diamond blastp provided by psp as ```uniprot_swiss_prot_LexA.dmnd``` 
 
 other parameters
-*```-wd```: woking path to save result files
+* ```-wd```: woking path to save result files
 
 ## How to run
 The users can only specify the required parameters:
