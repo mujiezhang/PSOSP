@@ -16,6 +16,7 @@ parser.add_argument('-hf', '--host_fasta', required=True, help="Host genome fast
 parser.add_argument('-vf', '--virus_fasta',required=True, help="Virus genome fasta file")
 parser.add_argument('-wd', '--working_dir', required=True, help="Output directory path")
 
+
 def run_prodigal(input_fna: str, output_faa: str, mode: str = "meta"):
     """Execute Prodigal gene prediction"""
     cmd = [
@@ -365,6 +366,12 @@ def main():
     pattern_box = analyze_sos_boxes(intergenic_region)
     a3, ms_label3, regu, hi_dic = cluster_and_analyze_hi(pattern_box, fna1, output_dir)
     predict_phage_type(virus_intergenic_region, fna2, a3, ms_label3, regu, hi_dic, output_dir)
+    os.system('rm '+intergenic_region)
+    os.system('rm '+regulon_region)
+    os.system('rm '+virus_intergenic_region)
+    os.system('rm -rf '+fimo_path)
+    os.system('rm '+virus_faa)
+    os.system('rm '+host_faa)
 
 if __name__ == "__main__":
     main()
