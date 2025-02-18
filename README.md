@@ -39,11 +39,16 @@ other parameters
 
 ## How to run
 The users can only specify the required parameters:
+* install through git
 ```
 python psp.py -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd output_dir
 ```
+* install through conda
+```
+psp -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd output_dir
+```
 
-for example:
+for example(install through git):
 ```
 python psp.py -hf E.coli-HS.fasta -vf phiECO1.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd .
 ```
