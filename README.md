@@ -12,20 +12,20 @@ Prodigal
 ```
 
 ## Installation
-(1) git (install dependencies mentioned above first)
-```
-git clone https://github.com/mujiezhang/PSP.git
-cd PSP
-python psp.py -h
-```
-
-(2) conda
+(1) conda (recommended)
 ```
 conda create -n psp
 conda activate psp
 conda install zhangmujie::psp
 ```
 usage: ```psp -h```
+
+(2) git (install dependencies mentioned above first)
+```
+git clone https://github.com/mujiezhang/PSP.git
+cd PSP
+python psp.py -h
+```
 
 ## Input files
 PSP needs four files as inputs,i.e.,
