@@ -21,9 +21,9 @@ python psp.py -h
 
 (2) conda
 ```
-conda create -n PSP python=3.12
-conda activate PSP
-conda install PSP
+conda create -n psp
+conda activate psp
+conda install zhangmujie::psp
 ```
 usage: ```psp -h```
 
