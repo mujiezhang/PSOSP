@@ -13,11 +13,8 @@ import argparse
 # Set up argument parser
 parser = argparse.ArgumentParser(description="PSP (Prophage SOS Predictor)")
 parser.add_argument('-hf', '--host_fasta', required=True, help="Host genome fasta file")
-parser.add_argument('-vf', '--virus_fasta', required=True, help="Virus genome fasta file")
-parser.add_argument('-motif', '--motif_file', required=True, help="19 motifs meme file")
-parser.add_argument('-lexa', '--lexa_db', required=True, help="LexA diamond database")
+parser.add_argument('-vf', '--virus_fasta',required=True, help="Virus genome fasta file")
 parser.add_argument('-wd', '--working_dir', required=True, help="Output directory path")
-
 
 def run_prodigal(input_fna: str, output_faa: str, mode: str = "meta"):
     """Execute Prodigal gene prediction"""
@@ -28,7 +25,7 @@ def run_prodigal(input_fna: str, output_faa: str, mode: str = "meta"):
         '-p', mode,
         '-q'
     ]
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd,check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 def parse_prodigal_fasta(fasta_file):
     genes = []
@@ -298,7 +295,7 @@ def predict_phage_type(virus_intergenic_region, fna2, a3, ms_label3, regu, hi_di
         )
 
 def run_fimo(memefile, regulon_region, fimo_path):
-    os.system('fimo --oc '+fimo_path +' '+memefile+' '+regulon_region)
+    os.system('fimo --oc '+fimo_path +' '+memefile+' '+regulon_region + '> /dev/null 2>&1')
 
     fimo_result={}
 
@@ -319,9 +316,12 @@ def main():
     # Assign arguments to variables
     fna1 = args.host_fasta
     fna2 = args.virus_fasta
-    memefile = args.motif_file
-    lexa_db = args.lexa_db
     output_dir = args.working_dir
+
+    script_path = os.path.abspath(__file__)
+    script_dir = os.path.dirname(script_path)
+    memefile = os.path.join(script_dir, "files/19-motifs-meme.txt")
+    lexa_db = os.path.join(script_dir, "files/uniprot_swiss_prot_LexA.dmnd")
 
     os.makedirs(output_dir, exist_ok=True)
     host_faa = os.path.join(output_dir, fna1.split('/')[-1]+".faa")
@@ -344,7 +344,7 @@ def main():
         'qseqid', 'sseqid', 'qlen', 'slen', 'qcovhsp', 'scovhsp',
         'pident', 'length', 'mismatch', 'gapopen', 'qstart', 'qend',
         'sstart', 'send', 'evalue', 'bitscore'
-    ], check=True)
+    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     if os.path.getsize(blast_out) == 0:
         sys.exit("No LexA homologs detected - analysis terminated")
 
