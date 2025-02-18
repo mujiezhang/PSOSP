@@ -47,7 +47,7 @@ for example:
 python psp.py -hf E.coli-HS.fasta -vf phiECO1.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd .
 ```
 
-Running this example with one core takes approximately two minutes. And you will get two files: ```host_whole_genome_HI.tsv``` and ```prediction.tsv```
+Running this example with one core takes approximately two minutes. And result file is stored in file ```*_prediction.tsv```
 
 ## Attention
 * PSP is designed for complete host and corresponding complete virus for that host. Using incomplete genome as input may influence the prediction accuracy.
