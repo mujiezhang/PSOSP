@@ -46,7 +46,7 @@ python psp.py -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
 psp -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
 ```
 
-for example(install through git):
+for example (install through git):
 ```
 python psp.py -hf test/E.coli-HS.fasta -vf test/phiECO1.fasta -wd test/
 ```
