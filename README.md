@@ -28,11 +28,9 @@ python psp.py -h
 ```
 
 ## Input files
-PSP needs four files as inputs,i.e.,
+PSP needs two files as inputs,i.e.,
 * ```-hf```: a host genome in fasta format
-* ```-vf```: a single viral genome in fasta format
-* ```-motif```: a motif file provided by psp as ```19-motifs-meme.txt``` 
-* ```-lexa```: lexa database for diamond blastp provided by psp as ```uniprot_swiss_prot_LexA.dmnd``` 
+* ```-vf```: a single viral genome in fasta format 
 
 other parameters
 * ```-wd```: woking path to save result files
@@ -41,16 +39,16 @@ other parameters
 The users can only specify the required parameters:
 * install through git
 ```
-python psp.py -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd output_dir
+python psp.py -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
 ```
 * install through conda
 ```
-psp -hf host-genome.fasta -vf virus-genome.fasta -motif 19-motifs-meme.txt -lexa uniprot_swiss_prot_LexA.dmnd -wd output_dir
+psp -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
 ```
 
 for example(install through git):
 ```
-python psp.py -hf test/E.coli-HS.fasta -vf test/phiECO1.fasta -motif files/19-motifs-meme.txt -lexa files/uniprot_swiss_prot_LexA.dmnd -wd .
+python psp.py -hf test/E.coli-HS.fasta -vf test/phiECO1.fasta -wd test/
 ```
 
 Running this example with one core takes approximately two minutes. And result file is stored in file ```*_prediction.tsv```
