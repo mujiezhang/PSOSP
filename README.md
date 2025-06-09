@@ -4,11 +4,12 @@ PSP is a novel bioinformatics tool to predict prophage induction modes by analyz
 ## Dependencies
 * PSP is a Python script that relies on:
 ```Biopython
-DIAMOND
-MEME
+DIAMOND=2.1.11
+MEME=5.5.5
 Python3
-scikit-learn
-Prodigal
+scikit-learn=1.6.1
+Prodigal=2.6.3
+biopython=1.85
 ```
 
 ## Installation
