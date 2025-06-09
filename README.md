@@ -1,4 +1,6 @@
 # Prophage-SOS-dependency-Predictor(PSP) 
+![98bca7a27a169f6e2eef9459652ad76a](https://github.com/user-attachments/assets/0057b958-f214-46d9-9407-d0f37976e7f7)
+
 PSP is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
 
 ## Dependencies
