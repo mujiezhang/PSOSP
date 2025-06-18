@@ -21,6 +21,7 @@ biopython=1.85
 ## Installation
 (1) conda (recommended)
 ```
+conda config --set channel_priority flexible
 conda create -n psp
 conda activate psp
 conda install zhangmujie::psp
