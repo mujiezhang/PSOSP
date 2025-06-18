@@ -7,6 +7,9 @@
 </div>
 PSP (<b>P</b>rophage <b>S</b>OS dependency <b>P</b>redictor) is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
 
+## Webserver
+我们提供PSP的在线网站供用户进行快速预测噬菌体的sos 调控类型：https://vee-lab.sjtu.edu.cn/PSP/
+
 ## Dependencies
 * PSP is a Python script that relies on:
 ```Biopython
