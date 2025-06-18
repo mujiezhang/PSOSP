@@ -16,6 +16,7 @@ Python3
 scikit-learn=1.6.1
 Prodigal=2.6.3
 biopython=1.85
+checkv=1.0.3
 ```
 
 ## Installation
