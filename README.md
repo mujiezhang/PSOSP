@@ -1,6 +1,6 @@
 <div align="center">
 
-# Prophage-SOS-dependency-Predictor(PSP)
+# Prophage-SOS-dependency-Predictor(PSOSP)
 
 <img src="https://github.com/user-attachments/assets/fd8d7436-f164-48cc-a2e5-044574184c12" alt="psp-logo" width="600" />
 
