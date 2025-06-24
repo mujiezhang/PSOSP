@@ -1,9 +1,10 @@
 
 # PSOSP: Prophage-SOS-dependency-Predictor
 PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
-<div style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/e03e4275-1d55-4aad-b747-1b4d5902f03f" width="600" alt="替代文本" />
-</div>
+
+![PSOSP-LOGO](https://github.com/user-attachments/assets/3f02c2e6-5596-4293-970f-45e60139e6a9)
+
+
 
 ## Table of contents
 <!-- TOC -->
@@ -27,7 +28,7 @@ We provide an online platform (PSOSP) for rapid prediction of bacteriophage indu
 
 ## Background
 Temperate phages integrate into the bacterial host genome as prophages. Under normal conditions, the LexA protein binds to the SOS box within the prophage, repressing the expression of phage-related genes and maintaining the lysogenic state. Upon external stimuli (such as exposure to DNA-damaging agents), the RecA protein is activated, leading the self-cleavage of LexA and its dissociation from the SOS box. This relieves the prophage repression, triggering the temperate phage to enter the lytic cycle and thereby facilitating its proliferation.
-![psp-theory2](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
+![psosp-theory](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
 
 
 
@@ -43,12 +44,12 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
    - HI<sub>min</sub> ≥ HI<sub>c2</sub> → **SiP** (SOS-independent Prophage)
    - HI<sub>c1</sub> < HI<sub>min</sub> < HI<sub>c2</sub> → **SuP** (SOS-uncertain Prophage)
 
-![PSP_workflow2](https://github.com/user-attachments/assets/f68229c4-70d1-427e-b3a5-0def250067d3)
+![PSOSP_workflow](https://github.com/user-attachments/assets/f68229c4-70d1-427e-b3a5-0def250067d3)
 
 
 ## Experimental validation
 We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 Peduoviridae, 3 Inoviridae, and 9 distinct novel families), with their hosts covering 7 bacterial genera (Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia, and Shewanella) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
-![experiment_validation2](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
+![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
 
 ## Input requirements
 **For host**:
