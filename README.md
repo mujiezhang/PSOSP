@@ -7,7 +7,7 @@
 
 </div>
 PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinformatics tool to predict prophage induction modes by analyzing the heterology index (HI) of LexA protein binding to target DNA, classifying prophages into SOS-dependent (SdPs) and SOS-independent (SiPs).
-
+[toc]
 # Table of contents
 -[PSOSP](# Prophage-SOS-dependency-Predictor(PSOSP))
 
