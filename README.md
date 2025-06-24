@@ -28,8 +28,8 @@ We provide an online platform (PSOSP) for rapid prediction of bacteriophage indu
 
 ## Background
 Temperate phages integrate into the bacterial host genome as prophages. Under normal conditions, the LexA protein binds to the SOS box within the prophage, repressing the expression of phage-related genes and maintaining the lysogenic state. Upon external stimuli (such as exposure to DNA-damaging agents), the RecA protein is activated, leading the self-cleavage of LexA and its dissociation from the SOS box. This relieves the prophage repression, triggering the temperate phage to enter the lytic cycle and thereby facilitating its proliferation.
-![psosp-theory](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
 
+![psosp-theory](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
 
 
 ## Workflow of PSOSP
@@ -49,6 +49,7 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 
 ## Experimental validation
 We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 Peduoviridae, 3 Inoviridae, and 9 distinct novel families), with their hosts covering 7 bacterial genera (Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia, and Shewanella) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
+
 ![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
 
 ## Input requirements
