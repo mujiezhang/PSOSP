@@ -33,13 +33,13 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 
 
 ## Workflow of PSOSP
-- LexA & Canonical SOS Box (CBS) Identification : Detect LexA proteins and CBS upstream LexA
+- LexA & Canonical SOS Box (CBS) Identification : Scanning the host genome to identify LexA protein and canonical SOS boxes (CSBs) located upstream of the lexA gene
   
-- Heterology Index (HI) Calculation: Scan intergenic regions for "N<sub>2</sub>-CTG-N<sub>10</sub>-CAG-N<sub>2</sub>" motifs, calculate HI values and Use MeanShift clustering establish classification thresholds(HI<sub>c1</sub> and HI<sub>c2</sub>)
+- Heterology Index (HI) Calculation: Identifying potential SOS boxes (PSBs) across bacterial genomes, calculating the Heterology Index (HI) for each PSB and establishing classification thresholds (HI<sub>c1</sub> and HI<sub>c2</sub>) via Mean Shift clustering results
   
-- PSB scan in prophage: Sliding 20bp window (1bp step) scan viral genomes for minimum HI (HI<sub>min</sub>)
+- PSB scan in prophage: Scanning PSBs within prophage promoter regions and determining of the minimum HI (HI<sub>min</sub>)
   
-- Prophage categoriation : compare HI<sub>min</sub> with classification thresholds
+- Prophage categoriation : Evaluating the ability of LexA binding to prophage promoter regions by comparing HImin with thresholds
    - HI<sub>min</sub> ≤ HI<sub>c1</sub> → **SdP** (SOS-dependent Prophage)
    - HI<sub>min</sub> ≥ HI<sub>c2</sub> → **SiP** (SOS-independent Prophage)
    - HI<sub>c1</sub> < HI<sub>min</sub> < HI<sub>c2</sub> → **SuP** (SOS-uncertain Prophage)
