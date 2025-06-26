@@ -75,9 +75,9 @@ We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriopha
 ## Dependencies
 * PSOSP is a Python script that relies on:
 ```
-DIAMOND=2.1.11
+DIAMOND=2.1.8
 MEME=5.5.5
-Python3
+Python3.12
 scikit-learn=1.6.1
 Prodigal=2.6.3
 biopython=1.85
