@@ -77,7 +77,7 @@ We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriopha
 ```
 DIAMOND=2.1.8
 MEME=5.5.5
-Python3.12
+Python=3.12
 scikit-learn=1.6.1
 Prodigal=2.6.3
 biopython=1.85
