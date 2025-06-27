@@ -1,3 +1,4 @@
 # This file tells setuptools what non-python files to include.
 # The 'graft' command recursively includes all files from the specified directory.
-graft files 
+graft files
+graft test 
