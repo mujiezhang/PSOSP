@@ -2,15 +2,15 @@ from setuptools import setup
 
 setup(
     name="psosp",
-    version="1.1.0",  # 确保这个版本号和您希望发布的版本一致
-    py_modules=['psosp'],  # Explicitly define the module instead of finding packages
-    author="Mujie Zhang",  # 您的名字
-    author_email="3224413991@qq.com",  # 您的邮箱
+    version="1.1.0",  
+    py_modules=['psosp'], 
+    author="Mujie Zhang", 
+    author_email="3224413991@qq.com", 
     description="PSOSP (Prophage SOS-dependency Predictor)",
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mujiezhang/PSOSP",  # 您的项目GitHub链接
-    license="MIT",  # 建议选择一个开源许可证，如MIT
+    url="https://github.com/mujiezhang/PSOSP", 
+    license="MIT",  
     entry_points={
         'console_scripts': [
             'psosp = psosp:main',
@@ -18,8 +18,6 @@ setup(
     },
     # include_package_data=True tells setuptools to use MANIFEST.in
     include_package_data=True,
-    # 根目录下的数据目录由 MANIFEST.in 控制，同时为了让 wheel 中也包含这些数据文件，
-    # 这里使用 package_data 针对"无包"命名空间 ''，指向 files 与 test 目录中的所有内容。
     package_data={
         '': ['files/*', 'test/*']
     },
