@@ -90,7 +90,11 @@ checkv=1.0.3
 conda config --set channel_priority flexible
 conda create -n psosp
 conda activate psosp
-conda install zhangmujie::psosp
+conda install psosp
+```
+download checkv database
+```
+checkv download_database ./
 ```
 usage: ```psosp -h```
 
@@ -109,21 +113,22 @@ PSOSP needs two files as inputs,i.e.,
 other parameters
 * ```-wd```: woking path to save result files
 * ```-faa```: host protein sequences in fasta format (optional)
+* ```-db```: checkv reference database path
 
 ## How to run
 The users can only specify the required parameters:
 * install through git
 ```
-python psosp.py -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
+python psosp.py -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
 ```
 * install through conda
 ```
-psosp -hf host-genome.fasta -vf virus-genome.fasta -wd output_dir
+psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
 ```
 
 for example (install through conda):
 ```
-psosp -hf test/E.coli-HS.fasta -vf test/phiECO1.fasta -wd test/
+psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/result -db /path/to/checkv-db
 ```
 
 
