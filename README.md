@@ -92,7 +92,9 @@ conda create -n psosp
 conda activate psosp
 conda install psosp
 ```
-download checkv database
+test installation:`psosp test`
+
+If you need CheckV results, please download CheckV database
 ```
 checkv download_database ./
 ```
@@ -113,7 +115,7 @@ PSOSP needs two files as inputs,i.e.,
 other parameters
 * ```-wd```: woking path to save result files
 * ```-faa```: host protein sequences in fasta format (optional)
-* ```-db```: checkv reference database path
+* ```-db```: checkv reference database path (optional)
 
 ## How to run
 The users can only specify the required parameters:
