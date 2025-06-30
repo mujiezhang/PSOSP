@@ -1,0 +1,14 @@
+# =========  MANIFEST.in  =========
+# 包含项目的基础说明和许可文件
+include README.md
+include LICENSE
+
+# 关键：递归地包含 'psosp' 包目录下的所有数据文件
+# 注意路径已经从 'files' 变为 'psosp/files'
+recursive-include psosp/files *.txt *.dmnd
+recursive-include psosp/test/data *.fna
+
+# 排除所有Python编译产生的临时文件和缓存
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
