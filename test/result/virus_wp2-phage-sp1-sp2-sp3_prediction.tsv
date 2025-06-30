@@ -1,4 +1,0 @@
-host	virus	prediction_result	prediction_quality	completeness	contamination	viral-HI(min)	box-seq	box-seq_start_pos	box-seq_strand	confidence_window_lower	confidence_window_upper	blast_status	fimo_status
-host_wp2.fna	sp1	SiP (SOS-independent Prophage)	high	100.0	0.0	14.2017	CACTGTATTATTATACCACA	29652	-	11.8522	13.3752	Blast_OK	Fimo_OK
-host_wp2.fna	sp2	SdP (SOS-dependent Prophage)	high	100.0	0.0	11.7239	TTATGTATGTATATTCAGCA	17757	-	11.8522	13.3752	Blast_OK	Fimo_OK
-host_wp2.fna	sp3	SiP (SOS-independent Prophage)	high	99.62	0.0	15.4715	CACTGTATAAAAAAACATAC	1225	-	11.8522	13.3752	Blast_OK	Fimo_OK
