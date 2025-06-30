@@ -15,7 +15,7 @@ setup(
     entry_points={
         'console_scripts': [
             # Point to the new, non-conflicting entry point in psosp/__main__.py
-            'psosp = psosp.__main__:main',
+            'psosp = psosp:main',
         ],
     },
     # This is crucial for including non-Python files specified in MANIFEST.in
