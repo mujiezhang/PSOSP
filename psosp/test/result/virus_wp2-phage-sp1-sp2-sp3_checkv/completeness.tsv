@@ -1,0 +1,4 @@
+contig_id	contig_length	viral_length	aai_expected_length	aai_completeness	aai_confidence	aai_error	aai_num_hits	aai_top_hit	aai_id	aai_af	hmm_completeness_lower	hmm_completeness_upper	hmm_num_hits	kmer_freq
+sp1	42609	NA	42454.23090459469	100.0	medium	5.36852754066194	39	CheckV-056080	47.66	19.15	67.69977862706492	98.55218454302427	21	1.0
+sp2	38815	NA	36788.70107207952	100.0	medium	6.85704348576821	2	CheckV-059978	56.48	36.53	84.25345670169669	99.9414455742603	22	1.0
+sp3	8141	NA	8172.052797332345	99.6200122771786	medium	6.96671056590088	2	CheckV-011391	47.72	79.89	91.83	100.0	1	1.0
