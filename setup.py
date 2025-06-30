@@ -14,8 +14,8 @@ setup(
     license="MIT",
     entry_points={
         'console_scripts': [
-            # Rename command to avoid name collision in conda-build environment
-            'psosp-run = psosp:main',
+            # Point to the module, which will be executed via -m
+            'psosp = psosp.__main__:main',
         ],
     },
     # This is crucial for including non-Python files specified in MANIFEST.in
