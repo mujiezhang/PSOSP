@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="psosp",
-    version="1.1.1",  
+    version="1.1.2",  
     py_modules=['psosp'], 
     author="Mujie Zhang", 
     author_email="3224413991@qq.com", 
