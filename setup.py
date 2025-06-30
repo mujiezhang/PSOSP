@@ -14,15 +14,10 @@ setup(
     license="MIT",
     entry_points={
         'console_scripts': [
-            # Point to the module, which will be executed via -m
+            # Point to the new, non-conflicting entry point in psosp/__main__.py
             'psosp = psosp.__main__:main',
         ],
     },
     # This is crucial for including non-Python files specified in MANIFEST.in
     include_package_data=True,
-    # package_data is an alternative, but MANIFEST.in is generally more robust
-    # We can leave this commented out or remove it if MANIFEST.in is correct
-    # package_data={
-    #     'psosp': ['files/*', 'test/data/*']
-    # },
 ) 
