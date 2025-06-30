@@ -8,7 +8,7 @@ from Bio.Seq import Seq
 from sklearn.cluster import MeanShift
 import numpy as np
 import argparse
-
+from .main import main
 
 # Set up argument parser
 parser = argparse.ArgumentParser(description="PSOSP (Prophage SOS-dependency Predictor)")
