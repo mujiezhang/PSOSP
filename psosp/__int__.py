@@ -727,5 +727,4 @@ def main():
             return
         run_prediction(args)
 
-if __name__ == "__main__":
-    main()
+
