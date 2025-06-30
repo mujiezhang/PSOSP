@@ -3,8 +3,7 @@
 include README.md
 include LICENSE
 
-# 关键：递归地包含 'psosp' 包目录下的所有数据文件
-# 注意路径已经从 'files' 变为 'psosp/files'
+
 recursive-include psosp/files *.txt *.dmnd
 recursive-include psosp/test/data *.fna
 
