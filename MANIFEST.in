@@ -1,0 +1,13 @@
+# =========  MANIFEST.in  =========
+# 包含项目的基础说明和许可文件
+include README.md
+include LICENSE
+
+# IMPORTANT: Recursively include all data files from WITHIN the 'psosp' package
+recursive-include psosp/files *.txt *.dmnd
+recursive-include psosp/test/data *.fna
+
+# Exclude standard junk files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
