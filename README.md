@@ -162,7 +162,7 @@ A detailed overview of **`virus_wp2-phage-sp1-sp2-sp3_prediction.tsv`**:
 - `host`: Input host filename
 - `virus`: Viral identifier in input FASTA
 - `prediction_result`: prediction induction mode of PSOSP. **SiPs**: SOS-independent Prophage; **SuPs**: SOS-uncertain Prophage; **SdPs**: SOS-dependent Prophage
-- `prediction quality`: **`High`** for viral completeness between 90%-100%; **`Medium`** for viral completeness between 50%-90%; **'Low'** for viral completeness lower than 50%
+- `prediction quality`: **`High`** for viral completeness between 90%-100%; **`Medium`** for viral completeness between 50%-90%; **`Low`** for viral completeness lower than 50%
 - `completeness`: Estimated viral completeness (CheckV)
 - `contamination`: Estimated viral contamination (CheckV)
 - `viral-HI(min)`: Minimal HI in viral genome
