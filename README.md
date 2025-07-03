@@ -18,10 +18,10 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 - [Experimental validation](#experimental-validation)
 - [Input requirements](#input-requirements)
 - [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Input files](#input-files)
-- [How to run](#how-to-run)
-- [Outputs](#outputs)
+- [**Installation**](#installation)
+- [**Input files**](#input-files)
+- [**How to run**](#how-to-run)
+- [**Outputs**](#outputs)
 - [Citation](#citation)
 
 <!-- /TOC -->
