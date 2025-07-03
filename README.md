@@ -104,8 +104,10 @@ usage: ```psosp -h```
 ```
 git clone https://github.com/mujiezhang/PSOSP.git
 cd PSOSP
-python psosp.py -h
+pip install -e .
 ```
+test installation:`psosp test`
+
 
 ## Input files
 PSOSP needs two files as inputs,i.e.,
@@ -119,16 +121,13 @@ other parameters
 
 ## How to run
 The users can only specify the required parameters:
-* install through git
-```
-python psosp.py -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
-```
+
 * install through conda
 ```
 psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
 ```
 
-for example (install through conda):
+using example data for a test (install through conda):
 ```
 psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/result -db /path/to/checkv-db
 ```
