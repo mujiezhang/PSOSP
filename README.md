@@ -4,10 +4,9 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 
 ![PSOSP-LOGO](https://github.com/user-attachments/assets/3f02c2e6-5596-4293-970f-45e60139e6a9)
 
-[![Bioconda Downloads](https://anaconda.org/bioconda/psosp/badges/downloads.svg)](https://anaconda.org/bioconda/psosp)
-![Conda Downloads](https://img.shields.io/conda/:variant/:channel/psosp)
-[![License](https://anaconda.org/bioconda/psosp/badges/license.svg)](https://anaconda.org/bioconda/psosp)
-[![version](https://anaconda.org/bioconda/psosp/badges/version.svg)](https://anaconda.org/bioconda/psosp)
+[![Conda Downloads](https://img.shields.io/conda/dn/bioconda/psosp?style=flat&label=Bioconda%20downloads&color=%2397CA00)](https://anaconda.org/bioconda/psosp)
+![GitHub License](https://img.shields.io/github/license/mujiezhang/psosp?style=flat)(https://anaconda.org/bioconda/psosp)
+[![conda release](https://anaconda.org/bioconda/psosp/badges/version.svg)](https://anaconda.org/bioconda/psosp)
 ## Table of contents
 <!-- TOC -->
 - [PSOSP: Prophage-SOS-dependency-Predictor](#psosp-prophage-sos-dependency-predictor)
