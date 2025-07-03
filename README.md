@@ -164,12 +164,12 @@ A detailed overview of **`virus_wp2-phage-sp1-sp2-sp3_prediction.tsv`**:
 - `prediction quality`: **`High`** for viral completeness between 90%-100%; **`Medium`** for viral completeness between 50%-90%; **`Low`** for viral completeness lower than 50%
 - `completeness`: Estimated viral completeness (CheckV)
 - `contamination`: Estimated viral contamination (CheckV)
-- `viral-HI(min)`: Minimal HI in viral genome
-- `box-seq`: sequence of potential sos box with minimal HI
+- `viral-HI(min)`: Minimal _HI_ in viral genome
+- `box-seq`: sequence of potential sos box with minimal _HI_
 - `box-seq_start_pos`: box start position in viral genome
 - `box-seq_strand`: + (forward) or - (reverse)
-- `confidence_window_lower`: Threshold HI<sub>c1</sub> (HI<sub>min</sub> ≤ HI<sub>c1</sub> → `SdP`) 
-- `confidence_window_upper`: Threshold HI<sub>c2</sub> (HI<sub>min</sub> ≥ HI<sub>c2</sub> → `SiP`) 
+- `confidence_window_lower`: Threshold _HI<sub>c1</sub>_ (_HI<sub>min</sub>_ ≤ _HI<sub>c1</sub>_ → `SdP`) 
+- `confidence_window_upper`: Threshold _HI<sub>c2</sub>_ (_HI<sub>min</sub>_ ≥ _HI<sub>c2</sub>_ → `SiP`) 
 - `blast_status`: 'Blast_OK' (LexA homologs found) or fails if absent
 - `fimo_status`: 'Fimo_OK' (SOS-box detected upstream of LexA) or fails if absent
 
