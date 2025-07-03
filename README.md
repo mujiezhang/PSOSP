@@ -4,7 +4,7 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 
 ![PSOSP-LOGO](https://github.com/user-attachments/assets/3f02c2e6-5596-4293-970f-45e60139e6a9)
 
-
+[![Bioconda Downloads](https://img.shields.io/conda/dn/conda-forge/psosp?color=blue)](https://anaconda.org/conda-forge/psosp)
 
 ## Table of contents
 <!-- TOC -->
