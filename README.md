@@ -90,7 +90,7 @@ checkv=1.0.3
 ```
 
 ## Installation
-(1) conda (recommended)
+(1) conda (**recommended**, easiest way to install)
 ```
 conda config --set channel_priority flexible
 conda create -n psosp
@@ -105,7 +105,7 @@ checkv download_database ./
 ```
 usage: ```psosp -h```
 
-(2) git (install dependencies mentioned above first)
+(2) git (**install dependencies mentioned above first**)
 ```
 git clone https://github.com/mujiezhang/PSOSP.git
 cd PSOSP
