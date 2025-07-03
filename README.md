@@ -127,7 +127,7 @@ The users can only specify the required parameters:
 psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
 ```
 
-using example data for a test (install through conda):
+using [example data](https://zenodo.org/records/15795217/files/test.zip?download=1) for a test:
 ```
 psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/result -db /path/to/checkv-db
 ```
