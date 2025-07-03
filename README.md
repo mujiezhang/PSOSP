@@ -129,14 +129,14 @@ psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_
 
 using [example data](https://zenodo.org/records/15795217/files/test.zip?download=1) for a test:
 ```
-psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/result -db /path/to/checkv-db
+psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/test-result -db /path/to/checkv-db
 ```
 
 
 ## Outputs
-In this example, the results of PSOSP's analysis will be written to the `test/result` directory, which will look like this:
+In this example, the results of PSOSP's analysis will be written to the `test/test-result` directory, which will look like this:
 ```
-test/result
+test/test-result
 ├── virus_wp2-phage-sp1-sp2-sp3_checkv
 ├── host_wp2.fna.faa_lexa_blast.tsv
 ├── host_wp2.fna_whole_genome_HI.tsv
