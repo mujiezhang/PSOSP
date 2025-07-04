@@ -62,7 +62,7 @@ We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriopha
 
 ## Input requirements
 **For host**:
-- Host Taxon Suitability: PSOSP is primarily suitable for Gammaproteobacteria. If your host belongs to another taxon, PSOSP is unlikely to produce meaningful results.
+- Host Taxon Suitability: **PSOSP is primarily suitable for _Gammaproteobacteria_**. If your host belongs to another taxon, PSOSP is unlikely to produce meaningful results.
 
 - Genome Quality: **We advise using host genomes with a completeness score above 90%,** since low-quality genomes may lose the LexA protein and lead to poor results. You can assess the completeness of your genome assembly using [**CheckM2**](https://github.com/chklovski/CheckM2).
 
