@@ -480,7 +480,9 @@ def predict_phage_type_multi(virus_intergenic_files, fna1, fna2, a3, ms_label3, 
                 contamination = '-'
             
             # Determine prediction quality based on completeness
-            if completeness == 'NA' or completeness == '-':
+            if phage_class == 'SdP (SOS-dependent Prophage)':
+                prediction_quality = 'high'
+            elif completeness == 'NA' or completeness == '-':
                 prediction_quality = 'low'
             else:
                 try:
