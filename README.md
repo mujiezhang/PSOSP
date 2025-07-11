@@ -14,15 +14,17 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 - [PSOSP: Prophage-SOS-dependency-Predictor](#psosp-prophage-sos-dependency-predictor)
 - [Webserver](#webserver)
 - [Background](#background)
-- [Workflow of PSOSP](#workflow-of-psosp)
-- [Experimental validation](#experimental-validation)
-- [Significance for prophage isolation](#significance-for-prophage-isolation)
-- [Input requirements](#input-requirements)
-- [Dependencies](#dependencies)
-- [**Installation**](#installation)
-- [**Input files**](#input-files)
-- [**How to run**](#how-to-run)
-- [**Outputs**](#outputs)
+  - [Principle](#principle)
+  - [Workflow](#workflow)
+  - [Experimental validation](#experimental-validation)
+  - [Significance for prophage isolation](#significance-for-prophage-isolation)
+- [Instructions](#Instructions)
+  - [Input requirements](#input-requirements)
+  - [Dependencies](#dependencies)
+  - [**Installation**](#installation)
+  - [**Input files**](#input-files)
+  - [**How to run**](#how-to-run)
+  - [**Outputs**](#outputs)
 - [Citation](#citation)
 
 <!-- /TOC -->
@@ -33,12 +35,13 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 We provide an online platform (PSOSP) for rapid prediction of bacteriophage induction modes: **https://vee-lab.sjtu.edu.cn/PSOSP/**. There you can upload your host and virus genomes and get the prediction results.
 
 ## Background
+### Principle
 Temperate phages integrate into the bacterial host genome as prophages. Under normal conditions, the LexA protein binds to the SOS box within the prophage, repressing the expression of phage-related genes and maintaining the lysogenic state. Upon external stimuli (such as exposure to DNA-damaging agents), the RecA protein is activated, leading the self-cleavage of LexA and its dissociation from the SOS box. This relieves the prophage repression, triggering the temperate phage to enter the lytic cycle and thereby facilitating its proliferation.
 
 ![psosp-theory](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
 
 
-## Workflow of PSOSP
+### Workflow
 - LexA & Canonical SOS Box (CBS) Identification : Scanning the host genome to identify LexA protein and canonical SOS boxes (CSBs) located upstream of the lexA gene
   
 - Heterology Index (_HI_) Calculation: Identifying potential SOS boxes (PSBs) across bacterial genomes, calculating the Heterology Index (_HI_) for each PSB and establishing classification thresholds (_HI<sub>c1</sub>_ and _HI<sub>c2</sub>_) via Mean Shift clustering results
@@ -53,19 +56,19 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 ![PSOSP_workflow](https://github.com/user-attachments/assets/c3a0334f-ce4f-4533-960a-ae8c19b71514)
 
 
-## Experimental validation
+### Experimental validation
 We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 Peduoviridae, 3 Inoviridae, and 9 distinct novel families), with their hosts covering 7 bacterial genera (Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia, and Shewanella) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
 
 ![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
 
 
-## Significance for prophage isolation
+### Significance for prophage isolation
 We propose that future phage isolation efforts could first use PSOSP to determine phage type
   - For <strong>SdPs</strong>, conventional SOS-inducing agents (e.g., MMC, UV) remain appropriate.
   - For <strong>SiPs</strong>, SOS-independent inducers such as DPO, C4-HSL, EDTA, and pyocyanin, or physical factors like varying salinity, temperature, and pH, should be considered
 
-
-## Input requirements
+## Instructions
+### Input requirements
 **For host**:
 - Host Taxon Suitability: **PSOSP is primarily suitable for Gammaproteobacteria**. If your host belongs to another taxon, PSOSP is unlikely to produce meaningful results.
 
@@ -82,7 +85,7 @@ We propose that future phage isolation efforts could first use PSOSP to determin
 - Host Association: The input viruses must be prophages integrated within the specific input host genome. Predicting associations for mismatched virus-host pairs is meaningless.
   
 
-## Dependencies
+### Dependencies
 * PSOSP is a Python script that relies on:
 ```
 DIAMOND=2.1.8
@@ -94,7 +97,7 @@ biopython=1.85
 checkv=1.0.3
 ```
 
-## Installation
+### Installation
 (1) conda (**recommended**, easiest way to install)
 ```
 conda config --set channel_priority flexible
@@ -119,7 +122,7 @@ pip install -e .
 test installation:`psosp test`
 
 
-## Input files
+### Input files
 PSOSP needs two files as inputs,i.e.,
 * ```-hf```: a host genome in fasta format
 * ```-vf```: a single viral genome in fasta format 
@@ -129,7 +132,7 @@ other parameters
 * ```-faa```: host protein sequences in fasta format (optional)
 * ```-db```: checkv reference database path (optional)
 
-## How to run
+### How to run
 The users can only specify the required parameters:
 
 * install through conda
@@ -143,7 +146,7 @@ psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -
 ```
 
 
-## Outputs
+### Outputs
 In this example, the results of PSOSP's analysis will be written to the `test/test-result` directory, which will look like this:
 ```
 test/test-result
