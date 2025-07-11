@@ -42,7 +42,7 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 
 
 ### Workflow
-- LexA & Canonical SOS Box (CBS) Identification : Scanning the host genome to identify LexA protein and canonical SOS boxes (CSBs) located upstream of the lexA gene
+- LexA & Canonical SOS Box (CBS) Identification : Scanning the host genome to identify LexA protein and canonical SOS boxes (CSBs) located upstream of the _lexA_ gene
   
 - Heterology Index (_HI_) Calculation: Identifying potential SOS boxes (PSBs) across bacterial genomes, calculating the Heterology Index (_HI_) for each PSB and establishing classification thresholds (_HI<sub>c1</sub>_ and _HI<sub>c2</sub>_) via Mean Shift clustering results
   
@@ -58,7 +58,7 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 
 
 ### Experimental validation
-We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 Peduoviridae, 3 Inoviridae, and 9 distinct novel families), with their hosts covering 7 bacterial genera (Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia, and Shewanella) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
+We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 _Peduoviridae_, 3 _Inoviridae_, and 9 distinct novel families), with their hosts covering 7 bacterial genera (_Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia_, and _Shewanella_) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
 
 ![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
 
@@ -72,18 +72,18 @@ We propose that future phage isolation efforts could first use PSOSP to determin
 ## Instructions
 ### Input requirements
 **For host**:
-- Host Taxon Suitability: **PSOSP is primarily suitable for Gammaproteobacteria**. If your host belongs to another taxon, PSOSP is unlikely to produce meaningful results.
+- Host Taxon Suitability: **PSOSP is primarily suitable for Gammaproteobacteria**, including multiple critical pathogens such as _Vibrio cholerae, Pseudomonas aeruginosa, Yersinia pestis, Escherichia coli, Salmonella enterica, Shigella spp._, and _Klebsiella spp_. Compatible bacterial genera can be viewed on the [**Statistics**](https://vee-lab.sjtu.edu.cn/PSOSP/statistics.html) page of the PSOSP online website.
   
 - Genome Quality: **We advise using host genomes with a completeness score above 90%,** since low-quality genomes may lose the LexA protein and lead to poor results. You can assess the completeness of your genome assembly using [**CheckM2**](https://github.com/chklovski/CheckM2).
   
 - Multi-Contig Genomes: If the host genome consists of multiple contigs, ensure the input host genome file contains all contigs (i.e., provide the genome assembly as a single multi-contig file).
 
 **For prophage**:
-- Genome Quality: PSOSP utilizes CheckV for quality assessment. **Predictions for viruses with a CheckV-estimated completeness >90% are relatively reliable.** If you are certain your viral genome is complete, you may disregard the CheckV results in the output file.
+- Genome Quality: PSOSP utilizes CheckV for quality assessment. **Predictions are reliable for prophages with >=90% CheckV completeness; accuracy decreases for completeness <90%**. If you are certain your phage genome is complete, you may disregard the CheckV results in the output file (as CheckV assessments can occasionally be inaccurate).
   
-- Multiple Inputs: The input viral genome file can contain sequences for multiple viruses (prophages).
+- Multiple Inputs: The input phage genome file can contain sequences for multiple prophages.
   
-- Host Association: The input viruses must be prophages integrated within the specific input host genome. Predicting associations for mismatched virus-host pairs is meaningless.
+- Host Association: Input phages must either be integrated into the corresponding host genome or capable of infecting the host. Predicting regulatory relationships between mismatched phage-host pairs is meaningless.
   
 
 ### Dependencies
@@ -126,7 +126,7 @@ test installation:`psosp test`
 ### Input files
 PSOSP needs two files as inputs,i.e.,
 * ```-hf```: a host genome in fasta format
-* ```-vf```: a single viral genome in fasta format 
+* ```-vf```: phage genome in fasta format 
 
 other parameters
 * ```-wd```: woking path to save result files
@@ -141,7 +141,7 @@ The users can only specify the required parameters:
 psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
 ```
 
-using example data [**in github**](https://github.com/mujiezhang/PSOSP/tree/main/psosp/test/) or [**in zenodo**](https://zenodo.org/records/15795217/files/test.zip) for a test:
+* using example data [**in github**](https://github.com/mujiezhang/PSOSP/tree/main/psosp/test/) or [**in zenodo**](https://zenodo.org/records/15795217/files/test.zip) for a test:
 ```
 psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -wd test/test-result -db /path/to/checkv-db
 ```
