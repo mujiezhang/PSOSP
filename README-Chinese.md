@@ -62,7 +62,7 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) 通过分析LexA�
 ### 对噬菌体分离的意义
 我们建议未来的噬菌体分离工作可以首先使用PSOSP来确定噬菌体类型
   - 对于<strong>SdPs</strong>，传统的SOS诱导剂（如MMC、UV）仍然适用。
-  - 对于<strong>SiPs</strong>，应考虑SOS非依赖型诱导剂，如DPO、C4-HSL、EDTA和pyocyanin，或物理因素，如不同的盐度、温度和pH
+  - 对于<strong>SiPs</strong>，应考虑SOS非依赖型诱导剂，如DPO、C4-HSL、EDTA和pyocyanin，或物理因素，如不同的盐度、温度和pH。
 
   
 ## 软件使用
