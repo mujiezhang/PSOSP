@@ -16,6 +16,7 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 - [Background](#background)
 - [Workflow of PSOSP](#workflow-of-psosp)
 - [Experimental validation](#experimental-validation)
+- [Significance for prophage isolation](#significance-for-prophage-isolation)
 - [Input requirements](#input-requirements)
 - [Dependencies](#dependencies)
 - [**Installation**](#installation)
@@ -49,15 +50,19 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
    - _HI<sub>min</sub>_ ≥ _HI<sub>c2</sub>_ → **SiP** (SOS-independent Prophage)
    - _HI<sub>c1</sub>_ < _HI<sub>min</sub>_ < _HI<sub>c2</sub>_ → **SuP** (SOS-uncertain Prophage)
 
-
 ![PSOSP_workflow](https://github.com/user-attachments/assets/c3a0334f-ce4f-4533-960a-ae8c19b71514)
-
 
 
 ## Experimental validation
 We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriophages spanning 10 viral families (including 2 Peduoviridae, 3 Inoviridae, and 9 distinct novel families), with their hosts covering 7 bacterial genera (Salmonella, Escherichia, Vibrio, Pseudomonas, Serratia_J, Hafnia, and Shewanella) across 3 bacterial orders (Enterobacterales, Enterobacterales_A, and Pseudomonadales). Significantly, all PSOSP predictions for these bacteriophages showed complete consistency with experimental evidence, demonstrating the tool's versatility and reliability across broad taxonomic ranges.
 
 ![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
+
+
+## Significance for prophage isolation
+We propose that future phage isolation efforts could first use PSOSP to determine phage type
+  - For <strong>SdPs</strong>, conventional SOS-inducing agents (e.g., MMC, UV) remain appropriate.
+  - For <strong>SiPs</strong>, SOS-independent inducers such as DPO, C4-HSL, EDTA, and pyocyanin, or physical factors like varying salinity, temperature, and pH, should be considered
 
 
 ## Input requirements
