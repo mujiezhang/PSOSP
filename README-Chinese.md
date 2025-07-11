@@ -13,15 +13,17 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) 通过分析LexA�
 - [PSOSP: 原噬菌体SOS依赖性预测器](#psosp-原噬菌体sos依赖性预测器)
 - [Webserver](#webserver)
 - [背景](#背景)
-- [PSOSP的工作流程](#psosp的工作流程)
-- [实验验证](#实验验证)
-- [对噬菌体分离的意义](#对噬菌体分离的意义)
-- [输入要求](#输入要求)
-- [依赖](#依赖)
-- [**安装**](#安装)
-- [**输入文件**](#输入文件)
-- [**如何运行**](#如何运行)
-- [**输出**](#输出)
+  - [基本原理](#基本原理)
+  - [工作流程](#工作流程)
+  - [实验验证](#实验验证)
+  - [对噬菌体分离的意义](#对噬菌体分离的意义)
+- [软件使用](#软件使用)
+  - [输入要求](#输入要求)
+  - [依赖](#依赖)
+  - [**安装**](#安装)
+  - [**输入文件**](#输入文件)
+  - [**如何运行**](#如何运行)
+  - [**输出结果**](#输出结果)
 - [引用](#引用)
 
 <!-- /TOC -->
@@ -32,11 +34,15 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) 通过分析LexA�
 我们提供了一个在线平台（PSOSP）用于快速预测噬菌体诱导模式：**https://vee-lab.sjtu.edu.cn/PSOSP**
 
 ## 背景
+<details>
+  <summary>基本原理、工作流程、实验验证、对噬菌体分离的意义</summary>
+  
+### 基本原理
 温和噬菌体作为前噬菌体整合到细菌宿主基因组中。在正常条件下，LexA蛋白与前噬菌体中的SOS box结合，抑制噬菌体相关基因的表达，维持溶原状态。当受到外部刺激（如暴露于DNA损伤剂）时，RecA蛋白被激活，导致LexA自切割并从SOS box上解离。这解除了对前噬菌体的抑制，触发温和噬菌体进入裂解周期，从而促进其复制。
 
 ![psosp-theory](https://github.com/user-attachments/assets/654a77e1-dbb6-44bb-9719-0fe4fca7519c)
 
-## PSOSP的工作流程
+### 工作流程
 - 鉴定LexA和经典SOS box（CBS）：扫描宿主基因组以鉴定LexA蛋白和位于lexA基因上游的经典SOS box（CSBs）
   
 - 异质性指数（_HI_）计算：识别细菌基因组中的潜在SOS boxes（PSBs），计算每个PSB的异质性指数（_HI_），并通过Mean Shift聚类结果建立分类阈值（_HI<sub>c1</sub>_ 和 _HI<sub>c2</sub>_）
@@ -50,22 +56,23 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) 通过分析LexA�
 
 ![PSOSP_workflow](https://github.com/user-attachments/assets/c3a0334f-ce4f-4533-960a-ae8c19b71514)
 
-## 实验验证
+### 实验验证
 我们使用14个经过实验验证的噬菌体（囊括10个病毒科，其中2个属于*Peduoviridae*、3个属于*Inoviridae*，另外9个属于不同的新科）验证PSOSP的准确性，其宿主覆盖7个细菌属（*Salmonella、Escherichia、Vibrio、Pseudomonas、Serratia_J、Hafnia*和*Shewanella*），囊括3个细菌目（Enterobacterales、Enterobacterales_A和Pseudomonadales）。值得注意的是，PSOSP对这些噬菌体的所有预测与实验证据完全一致，证明了该工具的通用性和可靠性。
 
 ![experiment_validation](https://github.com/user-attachments/assets/f39bc3c6-a18b-4bf4-9459-d14176d76289)
 
-## 对噬菌体分离的意义
+### 对噬菌体分离的意义
 我们建议未来的噬菌体分离工作可以首先使用PSOSP来确定噬菌体类型
   - 对于<strong>SdPs</strong>，传统的SOS诱导剂（如MMC、UV）仍然适用。
   - 对于<strong>SiPs</strong>，应考虑SOS非依赖型诱导剂，如DPO、C4-HSL、EDTA和pyocyanin，或物理因素，如不同的盐度、温度和pH
 
-## 输入要求
+</details>
+  
+## 软件使用
+### 输入要求
 **对于宿主**：
-- 宿主类别：**PSOSP主要适用于Gammaproteobacteria**，包括*Vibrio cholerae, Pseudomonas aeruginosa, Yersinia pestis, Escherichia coli, Salmonella enterica, Shigella spp.*和 *Klebsiella spp*在内的多类重要致病菌，可以通过PSOSP在线网站的[**Statistics**](https://vee-lab.sjtu.edu.cn/PSOSP/statistics.html)页面查看适用的细菌属
-
+- 宿主类别：**PSOSP主要适用于Gammaproteobacteria**，包括*Vibrio cholerae, Pseudomonas aeruginosa, Yersinia pestis, Escherichia coli, Salmonella enterica, Shigella spp*和 *Klebsiella spp*在内的多类重要致病菌，可以通过PSOSP在线网站的[**Statistics**](https://vee-lab.sjtu.edu.cn/PSOSP/statistics.html)页面查看适用的细菌属
 - 基因组质量：**建议使用完整度高于90%的宿主基因组**，因为低质量的基因组可能会丢失LexA蛋白降低预测准确度。可以使用[**CheckM2**](https://github.com/chklovski/CheckM2)评估宿主基因组的完整度。
-
 - 多Contig基因组：如果宿主基因组由多个contig组成，请确保输入的宿主基因组文件包含所有contigs。
 
 **对于前噬菌体**：
@@ -76,7 +83,7 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) 通过分析LexA�
 
 - 宿主关联：输入的病毒必须是整合在对应宿主基因组内的前噬菌体。预测不匹配的病毒-宿主之间的调控关系没有意义。
 
-## 依赖
+### 依赖
 * PSOSP是一个Python脚本，依赖于：
 ```
 DIAMOND=2.1.8
@@ -88,7 +95,7 @@ biopython=1.85
 checkv=1.0.3
 ```
 
-## 安装
+### 安装
 (1) conda (**推荐，最简单的安装方式**)
 ```
 conda config --set channel_priority flexible
@@ -113,7 +120,7 @@ pip install -e .
 测试安装是否成功:`psosp test`
 
 
-## 输入文件
+### 输入文件
 PSOSP需要两个文件作为输入：
 * ```-hf```：宿主基因组（fasta格式）
 * ```-vf```：单个病毒基因组（fasta格式）
@@ -123,7 +130,7 @@ PSOSP需要两个文件作为输入：
 * ```-faa```：宿主蛋白质序列（fasta格式，可选）
 * ```-db```：checkv参考数据库路径（可选）
 
-## 如何运行
+### 如何运行
 * 通过Conda安装
 ```
 psosp -hf /path/to/host-genome.fasta -vf /path/to/virus-genome.fasta -wd output_dir -db /path/to/checkv-db
@@ -135,7 +142,7 @@ psosp -hf test/data/host_wp2.fna -vf test/data/virus_wp2-phage-sp1-sp2-sp3.fna -
 ```
 
 
-## 输出结果
+### 输出结果
 在此示例中，PSOSP的分析结果将写入`test/test-result`目录，其结构如下：
 ```
 test/test-result
@@ -176,4 +183,4 @@ test/test-result
 - `fimo_status`: 'Fimo_OK'（在LexA上游检测到SOS box）或"-"（未检测到SOS box）
 
 ## 引用
-''''''
+......
