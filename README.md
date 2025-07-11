@@ -11,14 +11,14 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 
 ## Table of contents ([中文说明](https://github.com/mujiezhang/PSOSP/blob/main/README-Chinese.md)✨)
 <!-- TOC -->
-- [PSOSP: Prophage-SOS-dependency-Predictor](#psosp-prophage-sos-dependency-predictor)
+- [PSOSP: Prophage SOS-dependency Predictor](#psosp-prophage-sos-dependency-predictor)
 - [Webserver](#webserver)
 - [Background](#background)
   - [Principle](#principle)
   - [Workflow](#workflow)
   - [Experimental validation](#experimental-validation)
   - [Significance for prophage isolation](#significance-for-prophage-isolation)
-- [Instructions](#Instructions)
+- [Instructions](#instructions)
   - [Input requirements](#input-requirements)
   - [Dependencies](#dependencies)
   - [**Installation**](#installation)
@@ -32,7 +32,7 @@ PSOSP (<b>P</b>rophage <b>SOS</b> dependency <b>P</b>redictor) is a novel bioinf
 ## Webserver
 [![Total Predictions](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Online%20predictions&query=$.total_predictions&url=https%3A%2F%2Fvee-lab.sjtu.edu.cn%2FPSOSP%2Fbadge.php)](https://vee-lab.sjtu.edu.cn/PSOSP/)
 
-We provide an online platform (PSOSP) for rapid prediction of bacteriophage induction modes: **https://vee-lab.sjtu.edu.cn/PSOSP/**. There you can upload your host and virus genomes and get the prediction results.
+We provide an online platform (PSOSP) for rapid prediction of bacteriophage induction modes: **https://vee-lab.sjtu.edu.cn/PSOSP/**. There you can upload your host and phage genomes and get the prediction results.
 
 ## Background
 ### Principle
@@ -49,6 +49,7 @@ Temperate phages integrate into the bacterial host genome as prophages. Under no
 - PSB scan in prophage: Scanning PSBs within prophage promoter regions and determining of the minimum _HI_ (_HI<sub>min</sub>_)
   
 - Prophage categoriation : Evaluating the ability of LexA binding to prophage promoter regions by comparing HImin with thresholds
+  
    - _HI<sub>min</sub>_ ≤ _HI<sub>c1</sub>_ → **SdP** (SOS-dependent Prophage)
    - _HI<sub>min</sub>_ ≥ _HI<sub>c2</sub>_ → **SiP** (SOS-independent Prophage)
    - _HI<sub>c1</sub>_ < _HI<sub>min</sub>_ < _HI<sub>c2</sub>_ → **SuP** (SOS-uncertain Prophage)
@@ -65,23 +66,23 @@ We have validated PSOSP's accuracy using 14 experimentally confirmed bacteriopha
 ### Significance for prophage isolation
 We propose that future phage isolation efforts could first use PSOSP to determine phage type
   - For <strong>SdPs</strong>, conventional SOS-inducing agents (e.g., MMC, UV) remain appropriate.
+    
   - For <strong>SiPs</strong>, SOS-independent inducers such as DPO, C4-HSL, EDTA, and pyocyanin, or physical factors like varying salinity, temperature, and pH, should be considered
 
 ## Instructions
 ### Input requirements
 **For host**:
 - Host Taxon Suitability: **PSOSP is primarily suitable for Gammaproteobacteria**. If your host belongs to another taxon, PSOSP is unlikely to produce meaningful results.
-
+  
 - Genome Quality: **We advise using host genomes with a completeness score above 90%,** since low-quality genomes may lose the LexA protein and lead to poor results. You can assess the completeness of your genome assembly using [**CheckM2**](https://github.com/chklovski/CheckM2).
-
+  
 - Multi-Contig Genomes: If the host genome consists of multiple contigs, ensure the input host genome file contains all contigs (i.e., provide the genome assembly as a single multi-contig file).
 
 **For prophage**:
-
 - Genome Quality: PSOSP utilizes CheckV for quality assessment. **Predictions for viruses with a CheckV-estimated completeness >90% are relatively reliable.** If you are certain your viral genome is complete, you may disregard the CheckV results in the output file.
-
+  
 - Multiple Inputs: The input viral genome file can contain sequences for multiple viruses (prophages).
-
+  
 - Host Association: The input viruses must be prophages integrated within the specific input host genome. Predicting associations for mismatched virus-host pairs is meaningless.
   
 
@@ -172,19 +173,19 @@ A detailed overview of **`virus_wp2-phage-sp1-sp2-sp3_prediction.tsv`**:
 |               host_wp2.fna              |                    sp3                   |          SiP (SOS-independent Prophage)          |                      High                         |                    99.62                     |                     0.0                      |                   15.4715                    |         CACTGTATAAAAAAACATAC              |                     1225                       |                      -                       |                      11.8522                       |                      13.3752                       |                   Blast_OK                   |                   Fimo_OK                  |
 
 - `host`: Input host filename
-- `virus`: Viral identifier in input FASTA
+- `virus`: Phage identifier in input FASTA
 - `prediction_result`: prediction induction mode of PSOSP. **SiPs**: SOS-independent Prophage; **SuPs**: SOS-uncertain Prophage; **SdPs**: SOS-dependent Prophage
-- `prediction quality`: **`High`** for viral completeness between 90%-100% or for viruses predicted as SdPs; **`Medium`** for viral completeness between 50%-90%; **`Low`** for viral completeness lower than 50%
-- `completeness`: Estimated viral completeness (CheckV)
-- `contamination`: Estimated viral contamination (CheckV)
-- `viral-HI(min)`: Minimal _HI_ in viral genome
+- `prediction quality`: **`High`** for phage completeness between 90%-100% or for phages predicted as SdPs; **`Medium`** for phage completeness between 50%-90%; **`Low`** for phage completeness lower than 50%
+- `completeness`: Estimated phage completeness (CheckV)
+- `contamination`: Estimated phage contamination (CheckV)
+- `viral-HI(min)`: Minimal _HI_ in phage genome
 - `box-seq`: sequence of potential sos box with minimal _HI_
-- `box-seq_start_pos`: box start position in viral genome
+- `box-seq_start_pos`: box start position in phage genome
 - `box-seq_strand`: + (forward) or - (reverse)
 - `confidence_window_lower`: Threshold _HI<sub>c1</sub>_ (_HI<sub>min</sub>_ ≤ _HI<sub>c1</sub>_ → `SdP`) 
 - `confidence_window_upper`: Threshold _HI<sub>c2</sub>_ (_HI<sub>min</sub>_ ≥ _HI<sub>c2</sub>_ → `SiP`) 
-- `blast_status`: 'Blast_OK' (LexA homologs found) or fails if absent
-- `fimo_status`: 'Fimo_OK' (SOS-box detected upstream of LexA) or fails if absent
+- `blast_status`: 'Blast_OK' (LexA homologs found) or '-' if absent
+- `fimo_status`: 'Fimo_OK' (SOS-box detected upstream of LexA) or '-' if absent
 
 ## Citation
 ''''''
