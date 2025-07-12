@@ -114,12 +114,12 @@ checkv=1.0.3
     conda activate psosp
     ```
     test installation:`psosp test`
+    usage: ```psosp -h```
 
   - If you need CheckV results, please download CheckV database
     ```
     checkv download_database ./
     ```
-    usage: ```psosp -h```
 
 (2) git (**install dependencies mentioned above first**)
 ```
