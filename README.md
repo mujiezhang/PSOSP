@@ -100,19 +100,26 @@ checkv=1.0.3
 
 ### Installation
 (1) conda (**recommended**, easiest way to install)
-```
-conda config --set channel_priority flexible
-conda create -n psosp
-conda activate psosp
-conda install psosp checkv=1.0.3
-```
-test installation:`psosp test`
+  - install conda and bioconda channels (If already installed, please skip)
+    ```
+    wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
+    source ~/.bashrc
+    conda config --add channels bioconda
+    conda config --add channels conda-forge
+    ```
+  - install PSOSP
+    ```
+    conda create -n psosp psosp
+    conda activate psosp
+    ```
+    test installation:`psosp test`
 
-If you need CheckV results, please download CheckV database
-```
-checkv download_database ./
-```
-usage: ```psosp -h```
+  - If you need CheckV results, please download CheckV database
+    ```
+    checkv download_database ./
+    ```
+    usage: ```psosp -h```
 
 (2) git (**install dependencies mentioned above first**)
 ```
