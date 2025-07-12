@@ -92,27 +92,35 @@ checkv=1.0.3
 
 ### 安装
 (1) conda (**推荐，最简单的安装方式**)
-```
-conda config --set channel_priority flexible
-conda create -n psosp
-conda activate psosp
-conda install psosp checkv=1.0.3
-```
-测试安装是否成功:`psosp test`
 
-如果需要CheckV结果，请下载CheckV数据库
-```
-checkv download_database ./
-```
-使用方法: ```psosp -h```
+  - 安装conda并添加官方镜像 (如已安装, 请跳过)
+    ```
+    wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
+    source ~/.bashrc
+    conda config --add channels bioconda
+    conda config --add channels conda-forge
+    ```
+  - 安装 PSOSP
+    ```
+    conda create -n psosp psosp
+    conda activate psosp
+    ```
+    测试安装是否成功:`psosp test`
+
+  - 如果需要CheckV结果，请下载CheckV数据库
+    ```
+    checkv download_database ./
+    ```
+    使用方法: ```psosp -h```
 
 (2) git (**请先安装上述依赖**)
-```
-git clone https://github.com/mujiezhang/PSOSP.git
-cd PSOSP
-pip install -e .
-```
-测试安装是否成功:`psosp test`
+  ```
+  git clone https://github.com/mujiezhang/PSOSP.git
+  cd PSOSP
+  pip install -e .
+  ```
+  测试安装是否成功:`psosp test`
 
 
 ### 输入文件
