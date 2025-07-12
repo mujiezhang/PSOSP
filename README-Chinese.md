@@ -107,12 +107,12 @@ checkv=1.0.3
     conda activate psosp
     ```
     测试安装是否成功:`psosp test`
+    使用方法: ```psosp -h```
 
   - 如果需要CheckV结果，请下载CheckV数据库
     ```
     checkv download_database ./
     ```
-    使用方法: ```psosp -h```
 
 (2) git (**请先安装上述依赖**)
   ```
