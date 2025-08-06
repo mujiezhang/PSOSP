@@ -195,4 +195,4 @@ A detailed overview of **`virus_wp2-phage-sp1-sp2-sp3_prediction.tsv`**:
 - `fimo_status`: 'Fimo_OK' (SOS-box detected upstream of LexA) or '-' if absent
 
 ## Citation
-Yali Hao, Mujie Zhang, Xinjuan Lei, Chengrui Zhu, Taoliang Zhang, Yanping Zheng, Xiang Xiao, Huahua Jian. 2025. “PSOSP uncovers pervasive SOS-independent prophages with distinct genomic and host traits in the bacterial genomes.” _iMeta_ 4: e70073. https://doi.org/10.1002/imt2.70073.(accepted)
+Yali Hao, Mujie Zhang, Xinjuan Lei, Chengrui Zhu, Taoliang Zhang, Yanping Zheng, Xiang Xiao, Huahua Jian. 2025. “PSOSP uncovers pervasive SOS-independent prophages with distinct genomic and host traits in the bacterial genomes.” _iMeta_ 4 (**in press**): e70073. https://doi.org/10.1002/imt2.70073.
