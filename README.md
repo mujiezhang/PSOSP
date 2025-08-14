@@ -100,7 +100,7 @@ checkv=1.0.3
 
 ### Installation
 (1) conda (**recommended**, easiest way to install)
-  - install conda and bioconda channels (If already installed, please skip)
+  - install conda and add channels (If already installed, please skip)
     ```
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
     bash Miniconda3-latest-Linux-x86_64.sh
