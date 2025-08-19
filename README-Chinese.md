@@ -186,4 +186,4 @@ test/test-result
 - `fimo_status`: 'Fimo_OK'（在LexA上游检测到SOS box）或"-"（未检测到SOS box）
 
 ## 引用
-Yali Hao, Mujie Zhang, Xinjuan Lei, Chengrui Zhu, Taoliang Zhang, Yanping Zheng, Xiang Xiao, Huahua Jian. 2025. “PSOSP uncovers pervasive SOS-independent prophages with distinct genomic and host traits in the bacterial genomes.” _iMeta_ 4 (**in press**): e70073. https://doi.org/10.1002/imt2.70073.
+Hao, Yali, Mujie Zhang, Xinjuan Lei, Chengrui Zhu, Taoliang Zhang, Yanping Zheng, Xiang Xiao, and Huahua Jian. 2025. “PSOSP Uncovers Pervasive SOS‐Independent Prophages With Distinct Genomic and Host Traits in Bacterial Genomes.” iMeta e70073. https://doi.org/10.1002/imt2.70073
